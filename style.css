@@ -153,21 +153,55 @@ p {
     font-size: 3.5rem;
     color: white !important;
     margin-bottom: 1.5rem;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9) !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
     font-weight: 700 !important;
+    letter-spacing: -0.02em;
     background: none !important;
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: white !important;
     background-clip: unset !important;
 }
 
-.hero-tagline {
-    font-size: 1.4rem;
-    color: #f8fafc;
-    margin-bottom: 3rem;
-    font-weight: 400;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7), 1px 1px 3px rgba(0, 0, 0, 0.8);
-    line-height: 1.6;
+/* Hero Questions Section - Problem Statement */
+.hero-questions {
+    margin-bottom: 2.5rem;
+}
+
+.hero-questions p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 0;
+    letter-spacing: 0.01em;
+}
+
+/* Hero Solution Section - Value Proposition */
+.hero-solution {
+    margin-bottom: 3.5rem;
+}
+
+.hero-solution p {
+    font-size: 1.35rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    letter-spacing: 0.005em;
+}
+
+.hero-solution p:last-child {
+    margin-bottom: 0;
+}
+
+/* Minimal emphasis styles */
+.emphasis {
+    font-weight: 500;
+}
+
+.tagline-highlight strong {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 1);
 }
 
 .listen-buttons h3 {
@@ -589,8 +623,14 @@ p {
         font-size: 2.5rem;
     }
     
-    .hero-tagline {
-        font-size: 1.1rem;
+    .hero-questions p {
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .hero-solution p {
+        font-size: 1.2rem;
+        line-height: 1.7;
     }
     
     .nav {
@@ -654,9 +694,14 @@ p {
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
     }
     
-    .hero-tagline {
-        font-size: 1rem;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    .hero-questions p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .hero-solution p {
+        font-size: 1.05rem;
+        line-height: 1.6;
     }
     
     .episodes, .about {
