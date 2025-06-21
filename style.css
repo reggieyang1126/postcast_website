@@ -115,10 +115,10 @@ p {
 /* Hero Section */
 .hero {
     background: 
-        linear-gradient(135deg, rgba(45, 55, 72, 0.85) 0%, rgba(26, 32, 44, 0.9) 100%),
-        url('https://reggieyang1126.github.io/my_podcast/feeds/book_club/podcast_image.png');
-    background-size: cover;
-    background-position: center;
+        linear-gradient(135deg, rgba(45, 55, 72, 0.75) 0%, rgba(26, 32, 44, 0.85) 100%),
+        url('img/podcast_image_wide_bookshelf.png');
+    background-size: contain;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 6rem 0;
@@ -127,6 +127,7 @@ p {
     min-height: 70vh;
     display: flex;
     align-items: center;
+    background-color: #2d3748;
 }
 
 .hero::before {
@@ -374,6 +375,87 @@ p {
     background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%);
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 8px 25px rgba(237, 137, 54, 0.4);
+}
+
+/* Custom Audio Player Styles */
+.custom-audio-player {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.custom-audio-player audio {
+    display: none;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-pause-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ed8936 0%, #dd7324 100%);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(237, 137, 54, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.play-pause-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.play-pause-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(237, 137, 54, 0.4);
+}
+
+.play-pause-btn:hover::before {
+    opacity: 1;
+}
+
+.play-pause-btn:active {
+    transform: scale(1.05);
+}
+
+.play-pause-btn svg {
+    width: 16px;
+    height: 16px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Mobile responsiveness for audio player */
+@media (max-width: 768px) {
+    .play-pause-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .play-pause-btn svg {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 /* About Section */
